@@ -1,0 +1,64 @@
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 8rem;
+	padding-left: 2.4rem;
+	padding-right: 1.2rem;
+	a.nav__logo {
+		font-size: 2.4rem;
+		color: black;
+		font-weight: bold;
+		text-decoration: none;
+		transition: color 0.3s;
+	}
+	a.nav__logo:hover {
+		color: rgb(43, 122, 43);
+	}
+	&__list {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		list-style: none;
+		&-item {
+			position: relative;
+			align-content: center;
+			height: 100%;
+			padding: 0 1.2rem;
+		}
+		a {
+			font-size: 2.4rem;
+            font-weight: bold;
+			color: black;
+			text-decoration: none;
+			transition: color 0.3s;
+		}
+		a:hover,
+		a.active:hover {
+			color: white;
+		}
+		a::before {
+			content: '';
+			margin: auto;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			height: 0;
+			opacity: 0;
+			background-color: rgb(43, 122, 43);
+			z-index: -1;
+			transition: height 0.3s, opacity 0.3s;
+		}
+		a:hover::before {
+			opacity: 1;
+			height: 100%;
+		}
+
+		a.active {
+			color: rgb(43, 122, 43);
+		}
+	}
+}
