@@ -13,8 +13,8 @@ function MainNavigation() {
 					</NavLink>
 				</li>
 				<li className={classes['nav__list-item']}>
-					<NavLink to='/photos' className={({ isActive }) => (isActive ? classes.active : undefined)}>
-						Photos
+					<NavLink to='/anime' className={({ isActive }) => (isActive ? classes.active : undefined)}>
+						Anime
 					</NavLink>
 				</li>
 			</ul>
