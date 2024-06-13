@@ -4,6 +4,7 @@ import RootLayout from './pages/RootLayout'
 import Home from './pages/Home'
 import Anime from './pages/Anime'
 import animeLoader from './utiles/loaders/animeLoader.js'
+import AnimeInfo from './pages/AnimeInfo.jsx'
 function App() {
 	const router = createBrowserRouter([
 		{
@@ -12,6 +13,7 @@ function App() {
 			children: [
 				{ index: true, element: <Home /> },
 				{ path: 'anime', element: <Anime />, loader: animeLoader },
+				{ path: 'anime/:animeId', element: <AnimeInfo /> },
 			],
 		},
 	])

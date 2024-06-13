@@ -1,4 +1,4 @@
-import { useLoaderData } from 'react-router-dom'
+import { useLoaderData, Link } from 'react-router-dom'
 import classes from './Anime.module.scss'
 export default function Anime() {
 	const { results } = useLoaderData()
@@ -14,7 +14,7 @@ export default function Anime() {
 					</li>
 				))}
 			</ul>
+			<Link to='hunterxhunter'>Nawiguj</Link>
 		</section>
 	)
 }
-
