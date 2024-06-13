@@ -1,5 +1,3 @@
-// import classes from './Home.module.scss'
-
 function Home() {
 	return (
 		<>

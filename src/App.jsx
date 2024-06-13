@@ -12,8 +12,15 @@ function App() {
 			element: <RootLayout />,
 			children: [
 				{ index: true, element: <Home /> },
-				{ path: 'anime', element: <Anime />, loader: animeLoader },
-				{ path: 'anime/:animeId', element: <AnimeInfo /> },
+				{
+					path: 'anime',
+					id: 'anime_info',
+					children: [
+						{ index: true, element: <Anime /> },
+						{ path: ':animeId', element: <AnimeInfo /> },
+					],
+					loader: animeLoader,
+				},
 			],
 		},
 	])
